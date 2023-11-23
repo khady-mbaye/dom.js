@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM EN JAVASCRIPT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <style>
+        span {
+            color: red;
+        }
+
+        h3 {
+            text-decoration: underline;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: bisque;
+            padding: 5px 20px;
+
+        }
+        h2{
+          text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>DOM EN JAVASCRIPT</h1>
+    <h2><u>Definition</u></h2>
+    <p><strong>DOM</strong>(Document Object Model) est une interface de programmation d'application (API) permettant de
+        manipuler des documents HTML.</p>
+    <p>Le DOM représente un document HTML sous la forme d'une arborescence de nœuds. Le DOM fournit des fonctions qui
+        vous permettent d'ajouter, de supprimer et de modifier efficacement des parties du document.</p>
+    <h1>Sélection des éléments</h1>
+    <div class="container">
+        <h2>getElementById()</h2>
+        <p>Le <span>document.getElementById()</span> renvoie un élément DOM spécifié par un idou nullsi aucun élément
+            correspondant n'est trouvé.</p>
+        <h3>ex:</h3>
+        <p id="demo1">Hello word </p>
+    </div>
+    <div class="container">
+        <h2>getElementsByName()</h2>
+        <p>La <span>getElementsByName()</span> méthode renvoie une collection d'éléments avec un nom spécifié.</p>
+        <h3>ex:</h3>
+        <form action="">
+            <input name="animal" type="checkbox" value="Cats"> Cats:
+            <input name="animal" type="checkbox" value="Dogs"> Dogs:
+        </form>
+    </div>
+    <div class="container">
+        <h2>getElementsByTagName</h2>
+        <p>Le <span>getElementsByTagName</span> ()accepte un nom de balise et renvoie une liste d'éléments avec le nom
+            de balise correspondant</p>
+        <h3>ex:</h3>
+        <h4>Hi</h4>
+        <h4>hello</h4>
+    </div>
+    <div class="container">
+        <h2>querySelector()</h2>
+        <p>Le querySelector() trouve le premier élément qui correspond à un sélecteur CSS ou à un groupe de sélecteurs
+            CSS.<br>
+            Le querySelectorAll() trouve tous les éléments qui correspondent à un sélecteur CSS ou à un groupe de
+            sélecteurs CS</p>
+        <h3>ex:</h3>
+        <h6>hello !</h6>
+        <p class="demo33">world</p>
+        <p id="demo3">javascript</p>
+        <p class="demo4">KHady</p>
+        <p class="demo4">and Fama</p>
+    </div>
+    <h1> Éléments traversants</h1>
+    <div class="container">
+        <h2>Récupère l'élément parent parentNode</h2>
+        <p>Dans cette partie , nous allons apprendre comment obtenir le nœud parent d'un élément en utilisant l'
+            parentNode attribut JavaScript de l' Nodeobjet.</p>
+        <div id="main">
+            <p class="note">This is a note!</p>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Frères et sœurs JavaScript</h2>
+        <p>Le <strong>nextElementSibling</strong> renvoie le prochain frère d'un élément ou nullsi l'élément est le
+            dernier de la liste.</p>
+        <h3>ex:</h3>
+        <ul>
+            <li>ananas</li>
+            <li class="bana">babane</li>
+            <li>pomme</li>
+        </ul>
+
+    </div>
+    <div class="container">
+        <h2>Obtenir les éléments enfants d'un nœud en JavaScript</h2>
+        <p> Dans cette partie ,nvous allons voir comment obtenir le premier élément enfant, le dernier élément enfant et
+            tous les enfants d'un élément spécifié.</p>
+        <h3>ex:</h3>
+        <ul class="menu">
+            <li>aa</li>
+            <li>bb</li>
+            <li>cc</li>
+        </ul>
+        <p><u>NB:</u> Si on met des retours a la ligne des espaces le firstChild renvoie
+            un #text qui correspond a l'espacement entre la balise ul et la balise li</p>
+    </div>
+    <h1>MANIPULATION DES ÉLÉMENTS</h1>
+    <div class="container">
+        <h2>Créer un élément</h2>
+        <p>Le <strong>document.createElement()</strong> pour créer un nouvel élément HTML et l'attacher à l'arborescence
+            DOM.</p>
+        <h3>ex:</h3>
+        <ul class="menu2">
+            <li>HTML</li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2>JavaScript appendChild</h2>
+        <p><strong>appendChild()</strong> méthode JavaScript permet d'ajouter un nœud à la fin de la liste des nœuds
+            enfants d'un nœud parent spécifié.</p>
+        <h3>ex:</h3>
+        <p>L'element css cree dans la partie precedente est positionner en dernier lieu</p>
+    </div>
+    <div class="container">
+        <h2>JavaScript textContent</h2>
+        <p> la propriété <strong>textContent</strong> permet d' obtenir le contenu texte d'un nœud et de ses
+            descendants.</p>
+        <h3>ex:</h3>
+        <p>voir l'exemple precedente</p>
+    </div>
+    <div class="container">
+        <h2>innerHTML</h2>
+        <p>La propriété <strong>innerHTML</strong> permet d' obtenir ou définir un balisage HTML contenu dans l'élément.
+        </p>
+    </div>
+    <div class="container">
+        <h2>Différence entre innerHTML et createElement()</h2>
+        <p>Supposons que vous ayez un élément <strong> div</strong> avec la classe test :</p>
+        <p>Vous pouvez ajouter de nouveaux éléments à l' élément div en créant un élément et en l'ajoutant :</p>
+        <div class="test"></div>
+        <p>L'utilisation innerHTMLest plus propre et plus courte lorsque vous souhaitez ajouter des attributs à l'élément :</p>
+        <p>Cependant, l'utilisation de innerHTMLamène les navigateurs Web à analyser et à recréer tous les nœuds DOM à l'intérieur de l'élément div. Par conséquent, c’est moins efficace que de créer un nouvel élément et de l’ajouter au div. En d’autres termes, créer un nouvel élément et l’ajouter à l’arborescence DOM offre de meilleures performances que le innerHTML.</p>
+
+    </div>
+    <div class="container">
+        <h2>Fragment de document JavaScript</h2>
+    </div>
+    <div>
+        <h1> before() and after()</h1>
+        <p>Dans ctte partie nous allons voir comment ajouter un element avant ou apres un autre element</p>
+        <h3>ex:</h3>
+        <ul>
+            <li class="milieu">CSS</li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2>JavaScript insertAdjacentHTML</h2>
+    </div>
+
+    <script src="ficher.js"></script>
+</body>
+
+</html>
